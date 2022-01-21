@@ -1,6 +1,5 @@
 # react-protected-routes
 
-***
 ## About
 
 - Implemented protected routes in react.
