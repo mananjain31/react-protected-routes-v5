@@ -4,4 +4,19 @@
   align-items: center;
 }
 
+.login-logout-component .buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.login-logout-component .buttons button {
+  padding: 0.5rem;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 /*# sourceMappingURL=/src.e31bb0bc.css.map */
