@@ -16,9 +16,3 @@
 yarn install
 yarn start
 ```
-OR
-
-```
-npm install
-npm start
-```
