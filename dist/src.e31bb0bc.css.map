@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.scss"],"names":[],"mappings":"AAAA;EACI;EACA;EACA","file":"src.e31bb0bc.css","sourceRoot":"..\\src","sourcesContent":[".app {\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n}"]}
