@@ -1,21 +1,33 @@
-import {useState} from "react";
+import React,{ useState } from "react";
+import { Route, Redirect } from "react-router-dom";
+function useAuth(){
 
-function useAuth()
-{
     const [auth, setAuth] = useState(false);
 
-    const authLogin = callback => {
+    const login = ( callback ) => {
         setAuth(true);
-        callback();
+        if(callback)callback();
     }
 
-    const authLogout = callback => {
+    const logout = ( callback ) => {
         setAuth(false);
-        callback();
+        if(callback)callback();
     }
 
-    return {auth, authLogin, authLogout};
-}
+    const ProtectedRoute = ({component : Component , redirectTo ,...rest }) => {
+        return <Route 
+            {...rest}
+            render={props=>{
+                if(auth) {
+                    return <Component {...props}/>
+                } else {
+                    return <Redirect to={redirectTo ? redirectTo : '/'} />
+                }
+            }}
+        />
+    }
 
+    return {auth, login, logout, ProtectedRoute};
+}
 
 export default useAuth;
